@@ -7,6 +7,26 @@
             <h4 class="h4-responsive text-white">Basic tables</h4>
           </mdb-view>
           <mdb-card-body>
+            <h3 class="mt-5 text-left">
+                <strong>채용관리</strong>
+            </h3>
+            <!-- <table class="table table-striped"> -->
+            <table class="table">
+              <thead class="blue-grey lighten-4">
+                <tr><th>#</th><th>제목</th><th>내용</th><th>상태</th></tr>
+              </thead>
+              <tbody>
+                <tr 
+                  v-for="(item,index) in boardList"
+                  :key="item.idx"
+                  :index=index>
+                    <th scope="row">{{index+1}}</th>
+                    <td>{{item.title}}</td>
+                    <td>{{item.content}}</td>
+                    <td>{{item.status}}</td>
+                </tr>
+              </tbody>
+            </table>
             <h3 class="mt-5 text-left"><strong>Basic examples</strong></h3>
             <p>Using the most basic table markup, here’s how .table-based tables look in Bootstrap. All table styles are inherited in Bootstrap 4, meaning any nested tables will be styled in the same manner as the parent.</p>
             <mdb-tbl>
@@ -40,7 +60,24 @@
                 <tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr><tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
               </tbody>
             </table>
           </mdb-card-body>
@@ -64,7 +101,23 @@ export default {
     mdbTbl
   },
   data () {
-    return {}
+    return {
+        boardList:[]
+    }
+  },
+  methods: {
+      getRecuList() {
+          /* eslint-disable no-console */ 
+          this.axios.get('http://14.37.71.153:3011/getRecuList').then((res) => {
+              if(res.status == 200) {
+                this.boardList = res.data.result;
+              }
+              console.info('res', res);
+          });
+      }
+  },
+  mounted() {
+      this.getRecuList();
   }
 }
 </script>
