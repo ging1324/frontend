@@ -10,6 +10,19 @@
             <h3 class="mt-5 text-left">
                 <strong>채용관리</strong>
             </h3>
+            <div>
+            	<ul>
+            		<li>
+            			<div class="title">
+            				<p>제목<span>채용타입</span></p>
+            				<div class="date">2020-03-25</div>
+            			</div>
+            			<div class="content">
+            				내용내용
+            			</div>
+            		</li>
+            	</ul>
+            </div>
             <!-- <table class="table table-striped"> -->
             <table class="table">
                 <colgroup>
