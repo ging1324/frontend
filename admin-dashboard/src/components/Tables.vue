@@ -12,8 +12,19 @@
             </h3>
             <!-- <table class="table table-striped"> -->
             <table class="table">
+                <colgroup>
+                <col width="5%px" />
+                <col width="50%" />
+                <col width="20%" />
+                <col width="*" />
+                </colgroup>
               <thead class="blue-grey lighten-4">
-                <tr><th>#</th><th>제목</th><th>내용</th><th>상태</th></tr>
+                <tr>
+                    <th>#</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>상태</th>
+                </tr>
               </thead>
               <tbody>
                 <tr 
@@ -22,8 +33,8 @@
                   :index=index>
                     <th scope="row">{{index+1}}</th>
                     <td>{{item.title}}</td>
-                    <td>{{item.content}}</td>
-                    <td>{{item.status}}</td>
+                    <td>{{item.user_name}}</td>
+                    <td>{{statusToString(item.status)}}</td>
                 </tr>
               </tbody>
             </table>
@@ -106,19 +117,30 @@ export default {
     }
   },
   methods: {
-      getRecuList() {
-          /* eslint-disable no-console */ 
-          this.axios.get('http://14.37.71.153:3011/getRecuList').then((res) => {
-              if(res.status == 200) {
-                this.boardList = res.data.result;
-              }
-              console.info('res', res);
-          });
-      }
+    getRecuList() {
+        /* eslint-disable no-console */ 
+        this.axios.get('http://14.37.71.153:3013/boardList').then((res) => {
+            if(res.status == 200) {
+            this.boardList = res.data.result.boardList;
+            }
+            console.info('res', res);
+        });
+    },
+    statusToString(num){
+        if(num == 0) {
+            return "인턴";
+        }else if(num == 1) {
+            return "계약직";
+        }else if(num == 2) {
+            return "상시";
+        }else if(num == 3) {
+            return "정규";
+        }
+    }
   },
   mounted() {
       this.getRecuList();
-  }
+  },
 }
 </script>
 

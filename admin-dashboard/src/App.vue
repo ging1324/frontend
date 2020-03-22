@@ -11,19 +11,39 @@
             >Home</mdb-nav-item
           >
           <mdb-nav-item
-            href="https://mdbootstrap.com/docs/vue/getting-started/quick-start/"
+            href="/dashboard"
             waves-fixed
-            >About MDB</mdb-nav-item
+            >Dashboard</mdb-nav-item
           >
           <mdb-nav-item
-            href="https://mdbootstrap.com/docs/vue/getting-started/download/"
+            href="/tables"
             waves-fixed
-            >Free download</mdb-nav-item
+            >Tables</mdb-nav-item
           >
           <mdb-nav-item
-            href="https://mdbootstrap.com/education/bootstrap/"
+            href="/boardList"
             waves-fixed
-            >Free tutorials</mdb-nav-item
+            >게시물 보기</mdb-nav-item
+          >
+          <mdb-nav-item
+            href="/addBoard"
+            waves-fixed
+            >게시물 추가</mdb-nav-item
+          >
+          <mdb-nav-item
+            href="/profile"
+            waves-fixed
+            >Profiles</mdb-nav-item
+          >
+          <mdb-nav-item
+            href="/maps"
+            waves-fixed
+            >Maps</mdb-nav-item
+          >
+          <mdb-nav-item
+            href="/404"
+            waves-fixed
+            >404</mdb-nav-item
           >
         </mdb-navbar-nav>
         <mdb-navbar-nav right>

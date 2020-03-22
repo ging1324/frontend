@@ -1,11 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Dashboard from '@/components/Dashboard'
-import Profile from '@/components/Profile'
-import Tables from '@/components/Tables'
-import Maps from '@/components/Maps'
-import BadGateway from '@/components/BadGateway'
-
+import Dashboard from '@/components/Dashboard';
+import Profile from '@/components/Profile';
+import Tables from '@/components/Tables';
+import Maps from '@/components/Maps';
+import BadGateway from '@/components/BadGateway';
+import AddBoard from '@/components/AddBoard';
+import BoardList from '@/components/BoardList';
 
 Vue.use(Router);
 
@@ -47,6 +48,19 @@ export default new Router({
       path: '*',
       props: { page: 5 },
       redirect: '/404'
+    },
+    {
+      path: '/addBoard',
+      name: 'AddBoard',
+      props: { page: 6 },
+      component: AddBoard
+    },
+    {
+      path: '/boardList',
+      name: 'BoardList',
+      props: { page: 7 },
+      component: BoardList
     }
+    
   ]
 })
