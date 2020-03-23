@@ -3,39 +3,21 @@ https://github.com/mdbootstrap/Admin-Dashboard-Template-Vue-Bootstrap
  npm i
  npm run serve
 
-API 정보
----------- 사용자 정보 ----------
-[GET]basicAPI : 접속 테스트
-[POST]post_test : post 방식 테스트
-    body Json 형식으로 { "message": '내용 아무거나'}
-[POST]addUser : 사용자 추가
-    param
-        key             type        value
-        user_id         string      fed
-        user_passwd     string      1234!@
-        user_name       string      에프이디
-        user_address    string      서울시 어쩌구 저쩌구
-        user_birthday   string      2000-01-01
-        user_sex        char        M/F
-[GET]login :  로그인 요청
-    param
-        key             type        value
-        user_id         string      사용할 id
-        user_passwd     string      사용할 pw
-[GET]getUserInfo : 사용자 정보 요청(단건)
-    param
-        key             type        value
-        user_id         string      조회할 id
-[GET]getUserList : 사용자 전체 조회
----------- 게시판 정보 ----------
-[GET]boardList : 게시판 목록 요청
-[GET]boardDetail : 게시판 상세 정보 요청
-    param
-        key             type        value
-        user_id         string      3(게시물 아이디)
-[POST]boardAdd : 게시물 푸가
-    param
-        key             type                            value
-        user_id         string                          작성자 id
-        title           string                          제목
-        content         text(string이라고 생각하세요)     내용
+# api 정의서
+1. user
+---
+|type|url|param|desc|
+|-|-|-|-|-|-|
+|GET|basicAPI|-|GET  테스트|
+|POST|post_test|{message:'내용'}|POST  테스트 내용부분을 넣은대로 반환|
+|GET|login|user_id:string, user_passwd:string|로그인요청|
+|GET|getUserList|-|사용자 목록 조회|
+|GET|getUserInfo|user_id:string|사용자 단건조회|
+|POST|addUser|user_id:string, user_passwd:string, user_name:string, user_address:string, user_birthday:string, user_sex:char(M/F)|사용자 추가|
+2. board
+---
+|type|url|param|desc|
+|-|-|-|-|-|-|
+|GET|boardList|-|게시물 목록 요청|
+|GET|boardDetail|id:int(3)|게시물 단건 요청|
+|POST|boardAdd|{user_id:string (ex:7), title:string, content:string }|게시물 추가. 현재 작성자 id는 하드코딩 상태|
