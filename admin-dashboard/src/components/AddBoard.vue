@@ -10,6 +10,13 @@
       <label for="content"></label>
       <textarea id="content" v-model="contents "></textarea>
     </div>
+    <div>
+    <span>채용구분</span>
+      <input type="checkbox" id="all" value="전체"/>
+      <input type="checkbox" id="new" value="신입"/>
+      <input type="checkbox" id="career" value="경력"/>
+      <input type="checkbox" id="contract" value="계약"/>
+    </div>
     <button @click="addBoard">저장</button>
   </div>
 </template>
