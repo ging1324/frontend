@@ -11,14 +11,21 @@
       <textarea id="content" v-model="contents "></textarea>
     </div>
     <div>
-    <span>채용구분</span>
+      <span>채용구분</span>
+      <label for="always">상시</label>
+      <input type="radio" id="always" name="gubun"/>
+      <label for="not-always">채용시 마감</label>
+      <input type="radio" id="not-always" name="gubun"/>
+    </div>
+    <div>
+      <span>채용형태</span>
       <label for="all">전체</label>
-      <label for="new">신입</label>
-      <label for="career">경력</label>
-      <label for="contract">계약</label>
       <input type="checkbox" id="all" value="전체"/>
+      <label for="new">신입</label>
       <input type="checkbox" id="new" value="신입"/>
+      <label for="career">경력</label>
       <input type="checkbox" id="career" value="경력"/>
+      <label for="contract">계약</label>
       <input type="checkbox" id="contract" value="계약"/>
     </div>
     <button @click="addBoard">저장</button>
