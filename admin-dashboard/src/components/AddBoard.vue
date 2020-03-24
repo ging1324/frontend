@@ -12,10 +12,14 @@
     </div>
     <div>
     <span>채용구분</span>
-      <input type="checkbox" id="all" value="전체">전체</input>
-      <input type="checkbox" id="new" value="신입"신입</input>
-      <input type="checkbox" id="career" value="경력">경력</input>
-      <input type="checkbox" id="contract" value="계약">계약</input>
+      <label for="all">전체</label>
+      <label for="new">신입</label>
+      <label for="career">경력</label>
+      <label for="contract">계약</label>
+      <input type="checkbox" id="all" value="전체"/>
+      <input type="checkbox" id="new" value="신입"/>
+      <input type="checkbox" id="career" value="경력"/>
+      <input type="checkbox" id="contract" value="계약"/>
     </div>
     <button @click="addBoard">저장</button>
   </div>
