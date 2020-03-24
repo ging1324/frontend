@@ -12,10 +12,14 @@
     </div>
     <div>
       <span>채용구분</span>
-      <label for="always">상시</label>
       <input type="radio" id="always" name="gubun"/>
-      <label for="not-always">채용시 마감</label>
+      <label for="always">상시</label>
       <input type="radio" id="not-always" name="gubun"/>
+      <label for="not-always">공채</label>
+      <div class="not-always-date">
+        <input type="text" id="stDate" value="2020-01-01"/>
+        <input type="text" id="edDate" value="2020-03-01"/>
+      </div>
     </div>
     <div>
       <span>채용형태</span>
