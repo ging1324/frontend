@@ -7,6 +7,7 @@ import Maps from '@/components/Maps';
 import BadGateway from '@/components/BadGateway';
 import AddBoard from '@/components/AddBoard';
 import BoardList from '@/components/BoardList';
+import BoardDetail from '@/components/BoardDetail';
 
 Vue.use(Router);
 
@@ -60,6 +61,12 @@ export default new Router({
       name: 'BoardList',
       props: { page: 7 },
       component: BoardList
+    },
+    {
+      path: '/boardDetail',
+      name: 'BoardDetail',
+      props: { page: 8 },
+      component: BoardDetail
     }
     
   ]
