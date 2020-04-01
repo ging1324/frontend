@@ -22,15 +22,9 @@
       </div>
     </div>
     <div>
-      <span>채용형태</span>
-      <input type="checkbox" id="all" value="전체"/>
-      <label for="all">전체</label>
-      <input type="checkbox" id="new" value="신입"/>
-      <label for="new">신입</label>
-      <input type="checkbox" id="career" value="경력"/>
-      <label for="career">경력</label>
-      <input type="checkbox" id="contract" value="계약"/>
-      <label for="contract">계약</label>
+      <span>노출 여부</span>
+      <input type="checkbox" id="open" value="열기"/>
+      <label for="open">열기</label>
     </div>
     <button @click="addBoard">저장</button>
   </div>
