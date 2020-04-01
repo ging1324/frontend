@@ -36,7 +36,7 @@
                   <th>#</th>
                   <th>제목</th>
                   <th>작성자</th>
-                  <th>상태</th>
+                  <th>채용구분</th>
                 </tr>
               </thead>
               <tbody>
@@ -49,7 +49,7 @@
                     <a href="javascript:;" @click="goDetail(item.id)">{{item.title}}</a>
                     </td>
                   <td>{{item.user_name}}</td>
-                  <td>{{statusToString(item.status)}}</td>
+                  <td>{{statusToString(item.gubun)}}</td>
                 </tr>
               </tbody>
             </table>
