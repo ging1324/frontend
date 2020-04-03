@@ -21,6 +21,11 @@
             >Tables</mdb-nav-item
           >
           <mdb-nav-item
+            href="/userList"
+            waves-fixed
+            >사용자 목록</mdb-nav-item
+          >
+          <mdb-nav-item
             href="/boardList"
             waves-fixed
             >게시물 보기</mdb-nav-item
