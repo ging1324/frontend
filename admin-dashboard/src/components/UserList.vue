@@ -73,7 +73,7 @@ export default {
   methods: {
     getUsetList() {
       /* eslint-disable no-console */ 
-      this.axios.get('http://14.37.71.153:3013/getUserList').then((res) => {
+      this.axios.get(process.env.VUE_APP_BASE_URL+'/getUserList').then((res) => {
         if(res.status == 200) {
           this.userList = res.data.result;
         }

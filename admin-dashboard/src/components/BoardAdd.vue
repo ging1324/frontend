@@ -46,7 +46,7 @@ export default {
         'title': this.title,
         'content': this.contents
       }
-      this.axios.post('http://14.37.71.153:3013/boardAdd', board_info).then((res) => {
+      this.axios.post(process.env.VUE_APP_BASE_URL+'/boardAdd', board_info).then((res) => {
         if(res.status === 200) {
           alert('새 글이 등록 되었습니다!!');
           this.$router.push('/tables');

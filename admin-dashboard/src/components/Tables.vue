@@ -119,7 +119,7 @@ export default {
   methods: {
     getRecuList() {
         /* eslint-disable no-console */ 
-        this.axios.get('http://14.37.71.153:3013/boardList').then((res) => {
+        this.axios.get(process.env.VUE_APP_BASE_URL+'/boardList').then((res) => {
             if(res.status == 200) {
             this.boardList = res.data.result.boardList;
             }

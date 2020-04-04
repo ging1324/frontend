@@ -65,7 +65,7 @@ export default {
     getDetail() {
       this.id = this.$route.query.id;
         /* eslint-disable no-console */ 
-      this.axios.get('http://14.37.71.153:3013/boardDetail?id='+this.id).then((res) => {
+      this.axios.get(process.env.VUE_APP_BASE_URL+'/boardDetail?id='+this.id).then((res) => {
         if(res.status == 200) {
           this.detailData = res.data.result;
         }

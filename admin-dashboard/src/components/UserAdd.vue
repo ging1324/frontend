@@ -72,7 +72,7 @@ export default {
         return false;
       }
 
-      this.axios.post('http://14.37.71.153:3013/addUser', user_info).then((res) => {
+      this.axios.post(process.env.VUE_APP_BASE_URL+'/addUser', user_info).then((res) => {
         if(res.status === 200) {
           alert('새로운 사용자가 등록 되었습니다!!');
           // this.$router.push('/userList');
