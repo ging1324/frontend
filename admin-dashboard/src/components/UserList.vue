@@ -47,6 +47,9 @@
           </mdb-card-body>
         </mdb-card>
       </mdb-col>
+      <div>
+        <button type="button" class="btn btn-primary" @click="goAdd">추가</button>
+      </div>
     </mdb-row>
   </section>
 </template>
@@ -76,6 +79,9 @@ export default {
         }
         console.info('res', this.userList);
       });
+    },
+    goAdd() {
+      this.$router.push('/userAdd');
     }
   },
   mounted() {

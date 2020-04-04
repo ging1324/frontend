@@ -31,7 +31,7 @@
 </template>
 <script>
 export default {
-  name: 'AddBoard',
+  name: 'BoardAdd',
   date() {
     return {
       title:'',

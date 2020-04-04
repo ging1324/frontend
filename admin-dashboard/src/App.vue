@@ -10,16 +10,16 @@
           <mdb-nav-item to="/" waves-fixed active class="active"
             >Home</mdb-nav-item
           >
-          <mdb-nav-item
+          <!-- <mdb-nav-item
             href="/dashboard"
             waves-fixed
             >Dashboard</mdb-nav-item
-          >
-          <mdb-nav-item
+          > -->
+          <!-- <mdb-nav-item
             href="/tables"
             waves-fixed
             >Tables</mdb-nav-item
-          >
+          > -->
           <mdb-nav-item
             href="/userList"
             waves-fixed
@@ -31,16 +31,16 @@
             >게시물 보기</mdb-nav-item
           >
           <mdb-nav-item
-            href="/addBoard"
+            href="/boardAdd"
             waves-fixed
             >게시물 추가</mdb-nav-item
           >
-          <mdb-nav-item
+          <!-- <mdb-nav-item
             href="/profile"
             waves-fixed
             >Profiles</mdb-nav-item
-          >
-          <mdb-nav-item
+          > -->
+          <!-- <mdb-nav-item
             href="/maps"
             waves-fixed
             >Maps</mdb-nav-item
@@ -49,29 +49,7 @@
             href="/404"
             waves-fixed
             >404</mdb-nav-item
-          >
-        </mdb-navbar-nav>
-        <mdb-navbar-nav right>
-          <mdb-nav-item href="#!" waves-fixed
-            ><mdb-icon fab class="text-black" icon="facebook-square"
-          /></mdb-nav-item>
-          <mdb-nav-item href="#!" waves-fixed
-            ><mdb-icon fab icon="twitter"
-          /></mdb-nav-item>
-          <mdb-nav-item
-            href="https://github.com/mdbootstrap/bootstrap-material-design"
-            waves-fixed
-            class="border border-light rounded mr-1"
-            target="_blank"
-            ><mdb-icon fab icon="github" class="mr-2" />MDB GitHub
-          </mdb-nav-item>
-          <mdb-nav-item
-            href="https://mdbootstrap.com/products/vue-ui-kit/"
-            waves-fixed
-            class="border border-light rounded"
-            target="_blank"
-            ><mdb-icon icon="gem" far class="mr-2" />Go Pro
-          </mdb-nav-item>
+          > -->
         </mdb-navbar-nav>
       </mdb-navbar-toggler>
     </mdb-navbar>

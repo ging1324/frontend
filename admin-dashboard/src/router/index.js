@@ -5,10 +5,12 @@ import Profile from '@/components/Profile';
 import Tables from '@/components/Tables';
 import Maps from '@/components/Maps';
 import BadGateway from '@/components/BadGateway';
-import AddBoard from '@/components/AddBoard';
+import BoardAdd from '@/components/BoardAdd';
 import BoardList from '@/components/BoardList';
 import BoardDetail from '@/components/BoardDetail';
+import BoardModify from '@/components/BoardModify';
 import UserList from '@/components/UserList';
+import UserAdd from '@/components/UserAdd';
 
 Vue.use(Router);
 
@@ -52,10 +54,10 @@ export default new Router({
       redirect: '/404'
     },
     {
-      path: '/addBoard',
-      name: 'AddBoard',
+      path: '/boardAdd',
+      name: 'BoardAdd',
       props: { page: 6 },
-      component: AddBoard
+      component: BoardAdd
     },
     {
       path: '/boardList',
@@ -70,10 +72,24 @@ export default new Router({
       component: BoardDetail
     },
     {
+      path: '/boardModify',
+      name: 'BoardModify',
+      props: { page: 9 },
+      component: BoardModify
+    },
+    {
       path: '/userList',
       name: 'UserList',
-      props: { page: 9 },
+      props: { page: 10 },
       component: UserList
-    }
+    },
+    {
+      path: '/userAdd',
+      name: 'UserAdd',
+      props: { page: 11 },
+      component: UserAdd
+    },
+    
+    
   ]
 })
